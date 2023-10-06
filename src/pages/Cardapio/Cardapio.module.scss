@@ -3,6 +3,16 @@
 
 .menu {
   padding: 20px $padding-horizontal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__buscarFiltro {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
   @media (max-width: $desktop_xsm) {
     padding: 20px $padding-horizontal-mobile;
   }
@@ -16,13 +26,20 @@
 
 .header {
   align-items: center;
-  background-image: url("/assets/promoo.png");
+  background-image: url("/assets/prop.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  height: 440px;
-  padding: 10px; //REmover
+  height: 740px;
   padding: 0px $padding-horizontal;
+
+  &__text {
+    color: white;
+    font-size: 4rem;
+    min-width: 400px;
+    width: 40%;
+  }
+
   @media (max-width: $desktop_xsm) {
     padding: 0px $padding-horizontal-mobile;
   }
@@ -31,12 +48,6 @@
   }
   @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
     padding: 0px $padding-horizontal-md;
-  }
-  &__text {
-    color: white;
-    font-size: 4rem;
-    min-width: 400px;
-    width: 40%;
   }
 }
 
@@ -55,13 +66,12 @@
     color: $dark;
     font-size: 3rem;
     margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   &__filtros {
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
     width: 100%;
   }
 }
